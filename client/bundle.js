@@ -218,7 +218,6 @@ function createReplyButton(newPost, formReply) {
 
 // ********** Giphy Search Functionality **********
 let appkey = require("./secret").appkey;
-console.log(appkey)
 const gifBtn = document.getElementById("gif");
 gifBtn.addEventListener("click", gifapiCall);
 

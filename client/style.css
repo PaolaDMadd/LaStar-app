@@ -39,19 +39,11 @@ body {
 #header {
   background-color: var(--blue);
   padding: 5px;
-  display: inline-block;
   width: 100%;
   position: absolute;
   float: left;
 }
 
-/* h1 {
-  font-size: 62px;
-  margin-left: 10px;
-  float: left;
-  color: white;
-  font-family: 'Pacifico', Verdana, Sans-serif;
-} */
 
 nav {
   margin-top: 45px;
@@ -111,7 +103,6 @@ main {
   padding: 0;
   width: 100%;
   height: 100vh;
-  /* background-color: rgba(0, 217, 255, 0.349); */
   background-size: cover;
   z-index: -1;
 }
@@ -169,12 +160,12 @@ main {
   background-color: rgb(255, 255, 255, 0.5);
   border-radius: 10px;
   border: none;
+  margin:auto;
 }
 
 .newPostDiv {
   width: 480px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px auto;
   background-color: rgb(255, 255, 255, 0.5);
   border-radius: 10px;
   padding: 15px;
@@ -206,7 +197,7 @@ main {
   font-weight: bold;
 }
 
-#gif {
+#gif, #gridBtn{
   padding: 4px 8px;
   cursor: pointer;
   color: white;
@@ -216,32 +207,24 @@ main {
   width: 55px;
 }
 
+#gridBtn{
+  width: 100px;
+}
+
 #gif:hover {
   font-weight: bold;
 }
+#gridBtn:hover{
+  font-weight: bold;
+}
+
 
 #posts {
-  /* display: flex;  */
-  /* flex-direction: column;
-  align-items: center; */
   width: 100%;
   margin: auto;
   margin-bottom: 60px;
 }
 
-/* .gifContainer {
-  background-color: green;
-}
-
-/* .gifPost {
-  background-color: green;
- 
-} */
-
-/* #buttonContainer {
-  visibility: hidden;
-  border: 2px solid grey;
-} */
 
 .darkMode {
   background-image: url("starsgiphy.gif");
@@ -255,7 +238,6 @@ main {
 
 .reactionButtons {
   height: 30px;
-  /* margin: 10px auto; */
   margin-top: 15px;
   background-color: var(--buttonColour);
   width: 15%;
@@ -328,16 +310,6 @@ footer {
   color: white;
 }
 
-/* .reactionContainer {
-  display: flex;
-
-} */
-
-/* #posts div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}  */
 
 /* Grid style */
 #targetEl{
@@ -358,3 +330,4 @@ footer {
   width: 100%; */
   margin: 10px auto;
 } 
+
