@@ -216,7 +216,7 @@ function createReplyButton(newPost, formReply) {
 }
 
 // ********** Giphy Search Functionality **********
-
+let appkey = require("./secret").appkey;
 const gifBtn = document.getElementById("gif");
 gifBtn.addEventListener("click", gifapiCall);
 
@@ -224,7 +224,7 @@ function gifapiCall(e) {
   e.preventDefault();
   console.log("gif has been clicked");
 
-  let appkey = "Tq4DqmIUR4suGhxpH4Ph7U0q1Px5eIOB";
+  
 
   let url = `https://api.giphy.com/v1/gifs/search?api_key=${appkey}&limit=10&q=`;
   let str = document.getElementById("giphyInput").value.trim();
@@ -234,10 +234,6 @@ function gifapiCall(e) {
   fetch(url)
     .then((r) => r.json())
     .then((content) => {
-      // console.log for live demonstration
-      // console.log(content.data);
-      // console.log("META", content.meta);
-      //second url we receive from the server to render the image/emoji/text we want.
       let gifimg = document.createElement("img");
       gifimg.src =
         content.data[
@@ -246,20 +242,42 @@ function gifapiCall(e) {
       gifimg.classList.add("imgFormat");
       let gifContainer = document.getElementById("posts");
       gifContainer.setAttribute('class', 'gifPost');
-      // let gifContainer = document.createElement("div");
-      // gifContainer.setAttribute('class', 'gifContainer');
-      // postList.append(gifContainer);
       gifContainer.append(gifimg);
       gifContainer.insertAdjacentElement("afterbegin", gifimg);
     })
     .then(createPost)
     .catch((err) => {
-      console.log("AAAAAAHHH we got an error!!", err.warn);
+      console.log(err.warn);
     });
 }
 
-// let imageContainer = document.createElement(“div”);
-// imageContainer.setAttribute(‘class’, ‘imageContainer’);
-// imageContainer.append(gifimg);
-// imageContainer.insertAdjacentElement(“afterbegin”, gifimg);
-// gifContainer.append(imageContainer);
+// render giphy grid 
+
+const GiphyFetch = require("@giphy/js-fetch-api").GiphyFetch;
+const renderGrid = require("@giphy/js-components").renderGrid;
+//const throttle = require('throttle-debounce').throttle;
+
+
+const gridBtn = document.getElementById("gridBtn");
+gridBtn.addEventListener("click", componentApiCall);
+
+function componentApiCall(e){
+  e.preventDefault();
+  
+  const targetEl = document.getElementById("targetEl");
+    const gf = new GiphyFetch(appkey);
+    
+    const fetchGifs = () => gf.trending({ offset: 20, limit: 10 });
+    // render a grid
+    renderGrid({  fetchGifs, 
+                  onGifClick: (gif, e) => {
+                  e.preventDefault(); 
+                  console.log(gif.images.downsized.url)
+                  },
+                  width: 800,
+                  columns: 5,
+                  gutter: 2,
+                }, 
+                  targetEl);
+
+}

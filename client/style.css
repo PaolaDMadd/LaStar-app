@@ -338,3 +338,23 @@ footer {
   flex-direction: column;
   align-items: center;
 }  */
+
+/* Grid style */
+#targetEl{
+  background-color: lightgray;
+  width: fit-content;
+  margin: 10px auto;
+}
+
+.giphy-gif-img{
+  /* height:100px; */
+  width: 100%;
+  border-radius: 10%;
+  margin: auto;
+  object-fit: scale-down;
+}
+ .giphy-grid > div{
+  /* border: 20px solid green;
+  width: 100%; */
+  margin: 10px auto;
+} 
