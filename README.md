@@ -1,6 +1,6 @@
 # LaStar
 
-![](client/laStarDemo.gif)
+![](client/LaStarDemo.mov)
 
 This project aims to create a journal site where users can post their thoughts anonymously.
 
@@ -8,16 +8,16 @@ This project aims to create a journal site where users can post their thoughts a
 Fork and clone this repo `git clone` 
 
 ### Server side:
-• Run `cd server` to go into the server folder.
-• Run `npm install` to install all necessary dependencies.
-• Run `npm start` to start the server.
+- Run `cd server` to go into the server folder.
+- Run `npm install` to install all necessary dependencies.
+- Run `npm start` to start the server.
 
 ### Client side 
 to use Giphy Api you need a key you can create one on [Giphy DevelopersPage](https://developers.giphy.com/docs/api#quick-start-guide) once you have create your Giphy key 
-• modify the `secret.exemple.js` file
-• Run `npm install` to install all the dependencies.
-• Run `npm run bundle` to start the client side.
-• Then`open index.html` to see our site!
+- modify the `secret.example.js` file
+- Run `npm install` to install all the dependencies.
+- Run `npm run bundle` to start the client side.
+- Then`open index.html` to see our site!
 
 
 ## Technologies used
@@ -38,8 +38,8 @@ Mocha, Chai, SuperTest, NYC
 ## Licence
 
 ## Wins
-- Client side sucessfully sends data to server and can be accessed
-- Server side can recieve and send data back to client
+- Client side successfully sends data to server and can be accessed
+- Server side can receive and send data back to client
 - JSON file is external
 - Use external GIPHY API to search and retrieve gifs
 - Add animations to background
