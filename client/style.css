@@ -154,6 +154,12 @@ main {
   }
 }
 
+.isDisabled{
+    color: currentColor;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
 #postForm {
   padding: 20px;
   width: 480px;
