@@ -1,6 +1,8 @@
 # LaStar
 
-![](client/LaStar-app-Demo.mp4)
+<!-- ![](client/LaStar-app-Demo.mp4) -->
+![](client/main_functionalities.gif)
+
 
 This project aims to create a journal site where users can post their thoughts anonymously.
 
